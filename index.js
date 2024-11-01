@@ -44,6 +44,10 @@ const Router = express.Router();
 // Purchased Routes
 Router.get("/success", Payment.createPurchasedItems);
 
+Router.get("/", (req, res) => {
+  res.send("Hello");
+});
+
 Router.get("/myOrders", Auth.protect, Product.myOrders);
 
 // Images
